@@ -1,7 +1,7 @@
 Summary:	GTK+ greeter for lightdm
 Name:		lightdm-gtk-greeter
 Version:	1.1.1
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Themes
 Source0:	https://launchpad.net/lightdm-gtk-greeter/trunk/%{version}/+download/%{name}-%{version}.tar.gz
