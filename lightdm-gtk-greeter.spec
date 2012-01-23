@@ -1,11 +1,12 @@
 Summary:	GTK+ greeter for lightdm
 Name:		lightdm-gtk-greeter
 Version:	1.1.1
-Release:	2
+Release:	3
 License:	GPL v3
 Group:		Themes
 Source0:	https://launchpad.net/lightdm-gtk-greeter/trunk/%{version}/+download/%{name}-%{version}.tar.gz
 # Source0-md5:	6dcbcd2b8e71ab510fd16550368b4996
+Patch0:		paths.patch
 URL:		https://launchpad.net/lightdm-gtk-greeter
 BuildRequires:	gtk+3-devel
 BuildRequires:	lightdm-devel
@@ -18,8 +19,15 @@ Reference GTK+ greeter for LightDM.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__intltoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--disable-silent-rules
 %{__make}

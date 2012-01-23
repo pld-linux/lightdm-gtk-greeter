@@ -1,0 +1,11 @@
+--- lightdm-gtk-greeter-1.1.1/./src/Makefile.am~	2011-11-29 05:04:18.000000000 +0200
++++ lightdm-gtk-greeter-1.1.1/./src/Makefile.am	2012-01-23 03:01:57.960854098 +0200
+@@ -1,5 +1,8 @@
+ sbin_PROGRAMS = lightdm-gtk-greeter
+ 
++greeterdatadir = $(datadir)/lightdm-gtk-greeter
++configdir = $(sysconfdir)/lightdm
++
+ lightdm_gtk_greeter_SOURCES = \
+ 	lightdm-gtk-greeter.c
+ 
