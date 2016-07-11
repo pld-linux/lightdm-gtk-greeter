@@ -1,7 +1,7 @@
 Summary:	GTK+ greeter for lightdm
 Name:		lightdm-gtk-greeter
 Version:	2.0.1
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Themes
 Source0:	https://launchpad.net/lightdm-gtk-greeter/2.0/%{version}/+download/%{name}-%{version}.tar.gz
@@ -37,6 +37,8 @@ Reference GTK+ greeter for LightDM.
 %{__autoheader}
 %{__automake}
 %configure \
+	--enable-at-spi-command="%{_libdir}/at-spi-bus-launcher --launch-immediately" \
+	--disable-indicator-services-command \
 	--disable-silent-rules
 %{__make}
 
