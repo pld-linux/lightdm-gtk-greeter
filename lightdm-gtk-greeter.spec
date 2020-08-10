@@ -1,22 +1,22 @@
 Summary:	GTK+ greeter for lightdm
 Name:		lightdm-gtk-greeter
-Version:	2.0.7
+Version:	2.0.8
 Release:	1
 License:	GPL v3
 Group:		Themes
-Source0:	https://launchpad.net/lightdm-gtk-greeter/2.0/%{version}/+download/%{name}-%{version}.tar.gz
-# Source0-md5:	18f93a519f47d1c11007a4a9fb401dd3
+Source0:	https://github.com/Xubuntu/lightdm-gtk-greeter/releases/download/%{name}-%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	373c73c67367df511eb544e09a2da281
 Patch0:		paths.patch
-URL:		https://launchpad.net/lightdm-gtk-greeter
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	exo-devel >= 0.10.4-3
+URL:		https://github.com/Xubuntu/lightdm-gtk-greeter
+BuildRequires:	autoconf >= 2.64
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	gettext-tools >= 0.19.8
 BuildRequires:	glib2-devel
 BuildRequires:	gobject-introspection-devel >= 0.9.5
 BuildRequires:	gtk+3-devel
 BuildRequires:	libtool
-BuildRequires:	lightdm-libs-gobject-devel >= 1.3.5
+BuildRequires:	lightdm-libs-gobject-devel >= 1.19.2
+BuildRequires:	xfce4-dev-tools
 BuildRequires:	xorg-lib-libX11-devel
 Requires:	hicolor-icon-theme
 Provides:	lightdm-greeter
