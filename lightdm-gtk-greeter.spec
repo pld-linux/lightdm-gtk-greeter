@@ -38,7 +38,7 @@ Reference GTK+ greeter for LightDM.
 %{__autoheader}
 %{__automake}
 %configure \
-	--enable-at-spi-command="%{_libdir}/at-spi-bus-launcher --launch-immediately" \
+	--enable-at-spi-command="/usr/libexec/at-spi-bus-launcher --launch-immediately" \
 	--disable-indicator-services-command \
 	--disable-silent-rules
 %{__make}
